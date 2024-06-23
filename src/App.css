@@ -1,0 +1,13 @@
+.hover-text {
+  color: linear-gradient(to right, #e55b50 50%, #e55b50 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  transition: background-position 0.5s ease-in-out;
+  background-size: 200% 100%;
+  background-position: -100%;
+}
+
+.hover-div:hover .hover-text {
+  background-position: 0;
+}
