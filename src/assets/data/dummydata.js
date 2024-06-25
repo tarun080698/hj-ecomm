@@ -1,6 +1,6 @@
 export const productData = {
   id: "12345",
-  name: "Elegant Maxi Dress",
+  name: "Elegant Maxi",
   description: "A beautiful and flowing maxi dress perfect for any occasion.",
   price: 79.99,
   currency: "USD",

@@ -24,7 +24,7 @@ function Category() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
           {occasions.map((occasion, index) => (
-            <OccasionsCard occasion={occasion} />
+            <OccasionsCard occasion={occasion} key={index} />
           ))}
         </div>
       </div>

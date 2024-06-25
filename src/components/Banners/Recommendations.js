@@ -132,7 +132,6 @@ function Recommendations() {
           ))}
         </div>
       </div>
-      <div className={`${tab === 5 ? "block py-6" : "hidden"}`}>e</div>
     </div>
   );
 }

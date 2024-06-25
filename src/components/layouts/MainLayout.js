@@ -3,11 +3,11 @@ import Footer from "components/Footer/Footer";
 import Navbar from "components/Navbar/Navbar";
 import React from "react";
 
-function MainLayout({ children, title }) {
+function MainLayout({ children, title, classes }) {
   return (
     <div>
       {useDocumentTitle(title)}
-      <Navbar />
+      <Navbar classes={classes} />
       {children}
       <Footer />
     </div>

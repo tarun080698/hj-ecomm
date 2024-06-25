@@ -6,13 +6,20 @@ import { useDeviceTypeContext } from "contexts/DeviceTypeContext";
 import SlidingBanner from "./SlidingBanner";
 import MobileBanner from "./MobileBanner";
 
-function Navbar() {
-  const menu = ["Party", "Club", "Bridal", "Evening"];
+function Navbar({ classes }) {
+  const menu = [
+    { name: "Party", to: "/products?category=party" },
+    { name: "Club", to: "/products?category=club" },
+    { name: "Bridal", to: "/products?category=bridal" },
+    { name: "Evening", to: "/products?category=evening" },
+  ];
   const deviceType = useDeviceTypeContext();
 
   const trendingItems = ["Top Selling", "Best Rated", "Trending Products"];
   return (
-    <div className="shadow-md bg-black text-ivory duration-200 relative z-40">
+    <div
+      className={`shadow-md bg-black text-ivory duration-200 relative z-40 ${classes}`}
+    >
       {deviceType !== "Mobile" && <SlidingBanner />}
 
       {/* upper nav */}
@@ -70,13 +77,13 @@ function Navbar() {
       {/* lower nav */}
       <div className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
-          {menu.map((item, index) => (
+          {menu.map(({ name, to }, index) => (
             <li key={index} className="group relative">
               <Link
-                to={`/${item}`}
+                to={to}
                 className="inline-block px-4 hover:text-coral duration-200"
               >
-                {item}
+                {name}
               </Link>
               <div className="absolute left-4 h-1 w-1 invisible group-hover:w-5 group-hover:visible duration-300 transition-all bg-coral-dark"></div>
             </li>

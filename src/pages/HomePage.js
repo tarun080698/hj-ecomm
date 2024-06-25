@@ -4,7 +4,7 @@ import React from "react";
 
 function HomePage() {
   return (
-    <MainLayout>
+    <MainLayout title="Vani's Botique | Home">
       <Home />
     </MainLayout>
   );
