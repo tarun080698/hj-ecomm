@@ -1,13 +1,17 @@
-import React from 'react'
+import useDocumentTitle from "components/common/useTitle";
+import Footer from "components/Footer/Footer";
+import Navbar from "components/Navbar/Navbar";
+import React from "react";
 
-function MainLayout() {
+function MainLayout({ children, title }) {
   return (
     <div>
-    <Navbar />
-     
-    <Footer />
-  </div>
-  )
+      {useDocumentTitle(title)}
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
+  );
 }
 
-export default MainLayout
+export default MainLayout;
