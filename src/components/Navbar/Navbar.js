@@ -7,14 +7,7 @@ import SlidingBanner from "./SlidingBanner";
 import MobileBanner from "./MobileBanner";
 
 function Navbar() {
-  const menu = [
-    "Party",
-    "Birthday",
-    "Wedding",
-    "Graduation",
-    "Evening",
-    "Casual",
-  ];
+  const menu = ["Party", "Club", "Bridal", "Evening"];
   const deviceType = useDeviceTypeContext();
 
   const trendingItems = ["Top Selling", "Best Rated", "Trending Products"];
@@ -23,8 +16,8 @@ function Navbar() {
       {deviceType !== "Mobile" && <SlidingBanner />}
 
       {/* upper nav */}
-      <div className="bg-primarySkyBlue md:p-4 p-2">
-        <div className="flex container justify-between items-center">
+      <div>
+        <div className="flex justify-between items-center mx-auto py-2 px-4 max-w-4xl">
           <div className="cursor-pointer">
             <Link
               to="/"

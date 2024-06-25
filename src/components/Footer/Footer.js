@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="px-4 divide-y bg-coral-dark dark:bg-coral-dark text-black dark:text-black">
+    <footer className="divide-y bg-coral-dark dark:bg-coral-dark text-black dark:text-black">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
           <div className="cursor-pointer">
             <Link
               to="/"
-              className="font-bold text-xl sm:text-2xl flex gap-2 uppercase tracking-widest"
+              className="text-xl font-extrabold sm:text-2xl flex gap-2 uppercase tracking-widest"
             >
               Vani's Vibes
             </Link>
@@ -37,7 +37,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="/">
+                <a rel="noopener noreferrer" href="#FAQ">
                   FAQ
                 </a>
               </li>

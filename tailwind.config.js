@@ -40,12 +40,16 @@ module.exports = {
           text: "#991B1B",
         },
       },
-      container: {
-        center: true,
-        padding: {
-          default: "1rem",
-          sm: "3rem",
-        },
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "4rem",
+        lg: "6rem",
+        xl: "8rem",
+        "2xl": "16rem",
       },
     },
   },
@@ -57,5 +61,14 @@ module.exports = {
       borderColor: ["hover", "focus"],
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          paddingTop: "4rem",
+          paddingBottom: "4rem",
+        },
+      });
+    },
+  ],
 };

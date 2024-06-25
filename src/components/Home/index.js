@@ -1,4 +1,4 @@
-import Category from "components/Banners/Category";
+import Category from "components/Banners/CategorySection";
 import ImageCarousel from "components/Banners/ImageCarousel";
 import ContactUs from "components/Footer/ContactUs";
 import FAQ from "components/Footer/FAQ";

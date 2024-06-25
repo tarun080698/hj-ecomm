@@ -17,6 +17,7 @@ import img8 from "assets/images/E2595 - Nude.png";
 import img9 from "assets/images/E2603 - Gold.png";
 import img10 from "assets/images/E2607 - Black.png";
 import img11 from "assets/images/E2707 - Navy.png";
+import { useDeviceTypeContext } from "contexts/DeviceTypeContext";
 
 const images = [
   img1,
@@ -33,16 +34,17 @@ const images = [
 ];
 
 const ImageCarousel = () => {
+  const deviceType = useDeviceTypeContext();
   return (
     <div className="w-full mx-auto">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={1}
-        slidesPerView={3}
+        spaceBetween={0}
+        slidesPerView={deviceType === "Mobile" ? 3 : 4}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          waitForTransition: false,
         }}
         speed={5000}
         loop={true}
@@ -52,7 +54,7 @@ const ImageCarousel = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-auto aspect-auto"
+              className="w-full h-auto aspect-[2/3]"
             />
           </SwiperSlide>
         ))}

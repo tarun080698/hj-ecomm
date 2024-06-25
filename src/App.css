@@ -1,13 +1,14 @@
-.hover-text {
-  color: linear-gradient(to right, #e55b50 50%, #e55b50 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: white;
-  transition: background-position 0.5s ease-in-out;
-  background-size: 200% 100%;
-  background-position: -100%;
+.collage-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust this height as needed */
+  overflow: hidden;
+  display: flex;
 }
 
-.hover-div:hover .hover-text {
-  background-position: 0;
+.collage-image {
+  /* position: absolute; */
+  object-fit: cover;
+  border-radius: 10px; /* Optional: add some styling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some styling */
 }

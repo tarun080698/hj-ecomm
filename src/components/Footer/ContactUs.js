@@ -2,10 +2,12 @@ import React from "react";
 
 function ContactUs() {
   return (
-    <section className="py-6 bg-black dark:bg-gray-100 text-gray-50 dark:text-gray-900">
-      <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-        <div className="py-6 md:py-0 md:px-6">
-          <h1 className="text-4xl font-bold">Get in touch</h1>
+    <section className="bg-white dark:bg-black text-black">
+      <div className="container grid grid-cols-1 md:grid-cols-2 md:divide-x">
+        <div className="px-4">
+          <h1 className="text-2xl font-semibold sm:text-4xl text-coral-dark">
+            Get in touch
+          </h1>
           <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
           <div className="space-y-4">
             <p className="flex items-center">
@@ -48,16 +50,13 @@ function ContactUs() {
             </p>
           </div>
         </div>
-        <form
-          noValidate=""
-          className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-        >
+        <form noValidate="" className="flex flex-col space-y-6 p-4">
           <label className="block">
             <span className="mb-1">Full name</span>
             <input
               type="text"
               placeholder="Leroy Jenkins"
-              className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-coral focus:dark:ring-coral-600 bg-gray-800 dark:bg-gray-100"
+              className="block p-2 w-full  h-8 rounded-md shadow-sm text-black bg-gray-light"
             />
           </label>
           <label className="block">
@@ -65,19 +64,19 @@ function ContactUs() {
             <input
               type="email"
               placeholder="leroy@jenkins.com"
-              className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-coral focus:dark:ring-coral-600 bg-gray-800 dark:bg-gray-100"
+              className="block p-2 w-full  h-8 rounded-md shadow-sm text-black bg-gray-light"
             />
           </label>
           <label className="block">
             <span className="mb-1">Message</span>
             <textarea
               rows="3"
-              className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-coral focus:dark:ring-coral-600 bg-gray-800 dark:bg-gray-100"
+              className="block p-2 w-full rounded-md shadow-sm text-black bg-gray-light"
             ></textarea>
           </label>
           <button
             type="button"
-            className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-coral dark:bg-coral-600 text-gray-900 dark:text-gray-50 focus:ring-coral focus:dark:ring-coral-600 hover:ring-coral hover:dark:ring-coral-600"
+            className="font-bold self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-coral text-gray-900 focus:ring-coral hover:ring-coral"
           >
             Submit
           </button>
