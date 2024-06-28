@@ -65,8 +65,16 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         ".container": {
-          paddingTop: "4rem",
-          paddingBottom: "4rem",
+          paddingTop: "1rem",
+          paddingBottom: "1rem",
+          "@screen sm": {
+            paddingTop: "2rem",
+            paddingBottom: "2rem",
+          },
+          "@screen md": {
+            paddingTop: "3rem",
+            paddingBottom: "3rem",
+          },
         },
       });
     },

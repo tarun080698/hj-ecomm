@@ -17,18 +17,18 @@ function Footer() {
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-black dark:text-black">
-              Product
-            </h3>
+            <div className="tracking-wide uppercase text-black dark:text-black">
+              Products
+            </div>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="/">
-                  Features
+                  Brands
                 </a>
               </li>
               <li>
                 <a rel="noopener noreferrer" href="/">
-                  Integrations
+                  Shipping
                 </a>
               </li>
               <li>
@@ -44,9 +44,9 @@ function Footer() {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-black dark:text-black">
-              Company
-            </h3>
+            <div className="tracking-wide uppercase text-black dark:text-black">
+              Company Policies
+            </div>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="/">
@@ -60,8 +60,10 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h3 className="uppercase text-black dark:text-black">Developers</h3>
+          {/* <div className="space-y-3">
+            <div className="uppercase text-black dark:text-black">
+              Developers
+            </div>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="/">
@@ -79,7 +81,7 @@ function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="space-y-3">
             <div className="uppercase text-black dark:text-black">
               Social media

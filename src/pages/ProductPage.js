@@ -1,13 +1,18 @@
 import MainLayout from "components/layouts/MainLayout";
-import Products from "components/products";
+import Product from "components/products/Product";
 import React from "react";
+import { useParams } from "react-router-dom";
 
-function ProductListPage() {
+function ProductPage() {
+  const { id } = useParams();
+  console.log({ id });
   return (
-    <MainLayout title="Vani's Botique | Products" classes="sticky top-0">
-      <Products />
+    <MainLayout title="Vani's Botique | Products">
+      <div className="flex max-h-full relative">
+        <Product />
+      </div>
     </MainLayout>
   );
 }
 
-export default ProductListPage;
+export default ProductPage;

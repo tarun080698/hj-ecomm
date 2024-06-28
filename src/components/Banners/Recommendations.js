@@ -1,28 +1,21 @@
 import React, { useState } from "react";
 
-import img7 from "assets/images/E2585 - Blush.png";
-import img8 from "assets/images/E2595 - Nude.png";
-import img10 from "assets/images/E2607 - Black.png";
-import img11 from "assets/images/E2707 - Navy.png";
-import RecommendationCard from "./RecommendationCard";
-import { productData } from "assets/data/dummydata";
+import { products } from "assets/data/dummydata";
+import ProductCard from "components/products/ProductCard";
 
 function Recommendations() {
-  const party = [
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img11 },
-  ];
+  const party = products
+    .filter((item) => item?.name.includes("Short and Cocktail"))
+    .slice(0, 10);
+  const bridal = products
+    .filter((item) => item?.name.includes("Bridesmaids"))
+    .slice(0, 10);
+  const evening = products
+    .filter((item) => item?.name.includes("Prom"))
+    .slice(0, 10);
+  const club = products
+    .filter((item) => item?.name.includes("Ball Gowns"))
+    .slice(0, 10);
 
   const [tab, setTab] = useState(1);
   const changeTab = (e) => {
@@ -30,11 +23,9 @@ function Recommendations() {
     setTab(Number(e.target.id));
   };
 
-  console.log(party[0]);
-
   return (
     <div>
-      <div className="flex items-center space-x-4 justify-center flex-nowrap py-4">
+      <div className="flex items-center space-x-4 justify-center flex-nowrap p-4">
         <div
           id="1"
           onClick={changeTab}
@@ -83,12 +74,12 @@ function Recommendations() {
       <div
         className={`${
           tab === 1 ? "block py-6" : "hidden"
-        } relative w-full px-12`}
+        } relative w-full px-1 md:px-12`}
       >
         <div className="flex justify-start items-center overflow-x-auto scrollbar-thin">
           {party.map((item, index) => (
             <div key={index}>
-              <RecommendationCard item={item} key={index} />
+              <ProductCard item={item} key={index} simple={true} />
             </div>
           ))}
         </div>
@@ -96,12 +87,12 @@ function Recommendations() {
       <div
         className={`${
           tab === 2 ? "block py-6" : "hidden"
-        } relative w-full px-12`}
+        } relative w-full px-1 md:px-12`}
       >
         <div className="flex justify-start items-center overflow-x-auto scrollbar-thin">
-          {party.map((item, index) => (
+          {club.map((item, index) => (
             <div key={index}>
-              <RecommendationCard item={item} key={index} />
+              <ProductCard item={item} key={index} simple={true} />
             </div>
           ))}
         </div>
@@ -109,12 +100,12 @@ function Recommendations() {
       <div
         className={`${
           tab === 3 ? "block py-6" : "hidden"
-        } relative w-full px-12`}
+        } relative w-full px-1 md:px-12`}
       >
         <div className="flex justify-start items-center overflow-x-auto scrollbar-thin">
-          {party.map((item, index) => (
+          {bridal?.map((item, index) => (
             <div key={index}>
-              <RecommendationCard item={item} key={index} />
+              <ProductCard item={item} key={index} simple={true} />
             </div>
           ))}
         </div>
@@ -122,12 +113,12 @@ function Recommendations() {
       <div
         className={`${
           tab === 4 ? "block py-6" : "hidden"
-        } relative w-full px-12`}
+        } relative w-full px-1 md:px-12`}
       >
         <div className="flex justify-start items-center overflow-x-auto scrollbar-thin">
-          {party.map((item, index) => (
+          {evening.map((item, index) => (
             <div key={index}>
-              <RecommendationCard item={item} key={index} />
+              <ProductCard item={item} key={index} simple={true} />
             </div>
           ))}
         </div>

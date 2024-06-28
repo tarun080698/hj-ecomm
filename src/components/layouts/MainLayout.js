@@ -3,11 +3,11 @@ import Footer from "components/Footer/Footer";
 import Navbar from "components/Navbar/Navbar";
 import React from "react";
 
-function MainLayout({ children, title, classes }) {
+function MainLayout({ children, title }) {
   return (
-    <div>
+    <div className="max-h-full">
       {useDocumentTitle(title)}
-      <Navbar classes={classes} />
+      <Navbar />
       {children}
       <Footer />
     </div>

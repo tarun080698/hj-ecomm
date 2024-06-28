@@ -1,41 +1,20 @@
 import React from "react";
-import { IoClose } from "react-icons/io5";
-
-import img7 from "assets/images/E2585 - Blush.png";
-import img8 from "assets/images/E2595 - Nude.png";
-import img10 from "assets/images/E2607 - Black.png";
-import img11 from "assets/images/E2707 - Navy.png";
-import { productData } from "assets/data/dummydata";
+import { products } from "assets/data/dummydata";
 import ProductCard from "./ProductCard";
+import Dropdown from "components/common/Dropdown";
 
-function ProductListing({ filterData, handleFilterchange }) {
-  const party = [
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
-    { ...productData, Img: img7 },
-    { ...productData, Img: img8 },
-    { ...productData, Img: img10 },
-    { ...productData, Img: img11 },
+function ProductListing({ filterData, handleFilterchange, sortBy, setSortBy }) {
+  const items = [
+    { name: "Popular", value: "popular" },
+    { name: "New", value: "new" },
+    { name: "Price: High to Low", value: "lowtohigh" },
+    { name: "Price: Low to High", value: "hightolow" },
   ];
 
   return (
-    <div className="md:pl-4 w-full">
+    <div className="w-full md:w-4/5 overflow-y-auto">
       {/* filter pills */}
-      <div className="flex justify-start items-center">
+      {/* <div className="flex justify-start items-center">
         {Object.keys(filterData).length > 0 && (
           <div className="text-2xl font-bold">Filters:</div>
         )}
@@ -55,14 +34,18 @@ function ProductListing({ filterData, handleFilterchange }) {
             </div>
           ))}
         </div>
+      </div> */}
+
+      <div className="flex justify-end items-center mr-8">
+        <Dropdown items={items} sortBy={sortBy} setSortBy={setSortBy} />
       </div>
 
       {/* product listing */}
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          {party.map((item, index) => (
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {products.map((item, index) => (
             <div key={index}>
-              <ProductCard item={item} key={index} />
+              <ProductCard item={item} key={index} simple={true} />
             </div>
           ))}
         </div>

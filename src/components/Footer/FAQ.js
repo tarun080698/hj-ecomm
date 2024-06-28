@@ -4,9 +4,9 @@ function FAQ() {
   return (
     <section className="bg-black dark:bg-black text-white dark:text-white" id="FAQ">
       <div className="container flex flex-col justify-center">
-        <h2 className="text-2xl font-semibold sm:text-4xl">
+        <div className="text-2xl font-semibold sm:text-4xl">
           Frequently Asked Questions
-        </h2>
+        </div>
         <p className="mt-4 mb-8 text-white dark:text-white">
           Sagittis tempor donec id vestibulum viverra. Neque condimentum primis
           orci at lacus amet bibendum.

@@ -6,14 +6,13 @@ import img11 from "assets/images/E2707 - Navy.png";
 import OccasionsCard from "./OccasionsCard";
 
 import Recommendations from "./Recommendations";
-import ImageGrid from "./ImageGrid";
 
 function Category() {
   const occasions = [
-    { name: "Party", Img: img7 },
-    { name: "Club", Img: img8 },
-    { name: "Bridal", Img: img10 },
-    { name: "Evening", Img: img11 },
+    { name: "Party", Img: img7, to: "/products?category=party" },
+    { name: "Club", Img: img8, to: "/products?category=party" },
+    { name: "Bridal", Img: img10, to: "/products?category=bridal" },
+    { name: "Evening", Img: img11, to: "/products?category=evening" },
   ];
   return (
     <div className="flex flex-col">
@@ -47,7 +46,7 @@ function Category() {
             Vani's
           </span>
         </div>
-        <ImageGrid />
+        {/* <ImageGrid /> */}
       </div>
     </div>
   );

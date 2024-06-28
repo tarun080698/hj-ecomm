@@ -2,7 +2,7 @@ import React from "react";
 
 function RecommendationCard({ item }) {
   return (
-    <div className="inline-block m-2 border border-black-dark rounded-md w-60 max-w-64">
+    <div className="m-2 border border-black-dark rounded-md w-60 max-w-64">
       <img
         src={item?.Img}
         alt=""

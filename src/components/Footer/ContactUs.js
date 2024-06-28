@@ -4,10 +4,10 @@ function ContactUs() {
   return (
     <section className="bg-white dark:bg-black text-black">
       <div className="container grid grid-cols-1 md:grid-cols-2 md:divide-x">
-        <div className="px-4">
-          <h1 className="text-2xl font-semibold sm:text-4xl text-coral-dark">
+        <div className="">
+          <div className="text-2xl font-semibold sm:text-4xl text-coral-dark">
             Get in touch
-          </h1>
+          </div>
           <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
           <div className="space-y-4">
             <p className="flex items-center">

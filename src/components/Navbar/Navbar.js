@@ -6,7 +6,7 @@ import { useDeviceTypeContext } from "contexts/DeviceTypeContext";
 import SlidingBanner from "./SlidingBanner";
 import MobileBanner from "./MobileBanner";
 
-function Navbar({ classes }) {
+function Navbar() {
   const menu = [
     { name: "Party", to: "/products?category=party" },
     { name: "Club", to: "/products?category=club" },
@@ -18,7 +18,7 @@ function Navbar({ classes }) {
   const trendingItems = ["Top Selling", "Best Rated", "Trending Products"];
   return (
     <div
-      className={`shadow-md bg-black text-ivory duration-200 relative z-40 ${classes}`}
+      className={`shadow-md bg-black text-ivory duration-200 sticky z-40 top-0`}
     >
       {deviceType !== "Mobile" && <SlidingBanner />}
 
