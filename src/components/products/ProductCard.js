@@ -21,7 +21,9 @@ function ProductCard({ item, simple = false }) {
         <div className="py-1">
           <div className="text-sm md:text-base">
             <div className="pr-1 font-bold">{item?.code}</div>
-            <div className="text-sm whitespace-nowrap">{item?.name}</div>
+            <div className="text-sm text-gray-500 font-semibold">
+              {item?.name}
+            </div>
           </div>
           {!simple && false && (
             <div className=" text-sm md:text-base font-semibold">

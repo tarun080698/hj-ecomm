@@ -21,7 +21,7 @@ const ImageCarousel = () => {
           // waitForTransition: false,
         }}
         // navigation={true}
-        speed={3000}
+        speed={5000}
         loop={true}
       >
         {products.map(({ additional_images_url }, index) => (
@@ -29,7 +29,7 @@ const ImageCarousel = () => {
             <img
               src={additional_images_url[0]}
               alt={`Slide ${index + 1}`}
-              className="w-full aspect-[2/3] h-auto max-h-[600px]"
+              className="w-full aspect-[2/3] h-auto max-h-[650px]"
             />
           </SwiperSlide>
         ))}

@@ -19,7 +19,7 @@ function ProductFilter({ filterData, handleFilterchange }) {
           </div>
         )}
       </div>
-      <div>
+      <div className="h-dvh overflow-auto">
         <div>
           <div className="pt-2 text-base font-semibold">Category</div>
           <div className="py-2 px-1">
